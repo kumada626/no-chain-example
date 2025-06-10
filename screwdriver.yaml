@@ -1,11 +1,13 @@
 shared:
-  image: node:18
+  image: node:24
 
 jobs:
   first-job:
     requires: [~pr, ~commit]
     steps:
-      - echo: echo "this is first job. Hello World!"
+      - ls: ls
+    environment:
+      GIT_SPARCE_CHECKOUT_PATH: "foo bar"
   second-job:
     requires: [first-job]
     steps:

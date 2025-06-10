@@ -11,7 +11,7 @@ jobs:
   second-job:
     requires: [first-job]
     steps:
-      - echo: echo "this is second job."
+      - ls: ls
   random-job:
     requires: [second-job]
     steps:

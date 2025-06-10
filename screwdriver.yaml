@@ -7,7 +7,7 @@ jobs:
     steps:
       - ls: ls
     environment:
-      GIT_SPARCE_CHECKOUT_PATH: "foo bar"
+      GIT_SPARSE_CHECKOUT_PATH: "foo bar"
   second-job:
     requires: [first-job]
     steps:
